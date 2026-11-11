@@ -1,0 +1,1830 @@
+{
+  "generatedAt": "2026-11-11T04:57:42.667Z",
+  "node": "v26.13.0",
+  "results": [
+    {
+      "scenario": "instant-mining",
+      "blockTimeMs": 0,
+      "receiptPollingMs": 200,
+      "runs": 25,
+      "ok": 25,
+      "chromium": "158.0.8127.18",
+      "latencyMs": {
+        "toolCall_total": {
+          "n": 25,
+          "p50": 76.5,
+          "p95": 89.5,
+          "min": 64,
+          "max": 132
+        },
+        "page_load": {
+          "n": 25,
+          "p50": 28.3,
+          "p95": 34.2,
+          "min": 24.6,
+          "max": 41.9
+        },
+        "discovery": {
+          "n": 25,
+          "p50": 1.4,
+          "p95": 2.2,
+          "min": 1.1,
+          "max": 2.2
+        },
+        "first_request_402": {
+          "n": 25,
+          "p50": 1.8,
+          "p95": 2.3,
+          "min": 1.5,
+          "max": 2.5
+        },
+        "wallet_sign": {
+          "n": 25,
+          "p50": 2.4,
+          "p95": 4,
+          "min": 2,
+          "max": 7.7
+        },
+        "paid_request_verify_settle_and_result": {
+          "n": 25,
+          "p50": 70.3,
+          "p95": 82.9,
+          "min": 58.1,
+          "max": 118.1
+        },
+        "facilitator_verify": {
+          "n": 25,
+          "p50": 19.6,
+          "p95": 27.4,
+          "min": 15.3,
+          "max": 44.3
+        },
+        "facilitator_settle": {
+          "n": 25,
+          "p50": 49.2,
+          "p95": 60.3,
+          "min": 41.3,
+          "max": 69.9
+        },
+        "pay_path_402_to_result": {
+          "n": 25,
+          "p50": 72.6,
+          "p95": 85.3,
+          "min": 60.3,
+          "max": 125.8
+        }
+      },
+      "roundTrips": {
+        "toolToMerchantHttp": 2,
+        "merchantToFacilitator": 2,
+        "chainTxPerCall": 1
+      },
+      "failures": [],
+      "raw": [
+        {
+          "ok": true,
+          "callMs": 131.97590300000002,
+          "loadMs": 41.92236600000001,
+          "discoverMs": 2.150718999999981,
+          "timing": {
+            "firstRequestMs": 2.2000000029802322,
+            "requests": 2,
+            "signMs": 7.700000002980232,
+            "paidRequestMs": 118.09999999403954,
+            "totalMs": 128.09999999403954
+          },
+          "verifyMs": 44.291177999999945,
+          "settleMs": 69.86115599999994
+        },
+        {
+          "ok": true,
+          "callMs": 89.46824700000002,
+          "loadMs": 29.90986699999985,
+          "discoverMs": 1.7121570000001611,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.4000000059604645,
+            "paidRequestMs": 82.90000000596046,
+            "totalMs": 87.20000000298023
+          },
+          "verifyMs": 20.737944999999854,
+          "settleMs": 60.28444599999989
+        },
+        {
+          "ok": true,
+          "callMs": 81.90170899999976,
+          "loadMs": 28.689182999999957,
+          "discoverMs": 1.3023490000000493,
+          "timing": {
+            "firstRequestMs": 1.7000000029802322,
+            "requests": 2,
+            "signMs": 2.5,
+            "paidRequestMs": 75.70000000298023,
+            "totalMs": 79.90000000596046
+          },
+          "verifyMs": 21.075934999999845,
+          "settleMs": 52.87913400000025
+        },
+        {
+          "ok": true,
+          "callMs": 74.9698540000004,
+          "loadMs": 25.405627000000095,
+          "discoverMs": 1.2434169999996811,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 69,
+            "totalMs": 73.1000000089407
+          },
+          "verifyMs": 19.092695000000276,
+          "settleMs": 48.45731799999976
+        },
+        {
+          "ok": true,
+          "callMs": 75.49314600000025,
+          "loadMs": 26.408898999999565,
+          "discoverMs": 1.6789330000001428,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 69.20000000298023,
+            "totalMs": 73
+          },
+          "verifyMs": 18.809687999999824,
+          "settleMs": 48.71743200000037
+        },
+        {
+          "ok": true,
+          "callMs": 83.81949499999973,
+          "loadMs": 25.46532900000011,
+          "discoverMs": 1.142746999999872,
+          "timing": {
+            "firstRequestMs": 2.1000000089406967,
+            "requests": 2,
+            "signMs": 2.5999999940395355,
+            "paidRequestMs": 77,
+            "totalMs": 81.79999999701977
+          },
+          "verifyMs": 19.954909999999927,
+          "settleMs": 54.458538999999746
+        },
+        {
+          "ok": true,
+          "callMs": 78.05734900000016,
+          "loadMs": 26.955956000000242,
+          "discoverMs": 1.5707589999997253,
+          "timing": {
+            "firstRequestMs": 2,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 71.29999999701977,
+            "totalMs": 75.70000000298023
+          },
+          "verifyMs": 17.268094999999903,
+          "settleMs": 52.14560200000005
+        },
+        {
+          "ok": true,
+          "callMs": 72.34215099999983,
+          "loadMs": 32.4275319999997,
+          "discoverMs": 1.294474000000264,
+          "timing": {
+            "firstRequestMs": 1.5999999940395355,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 66.70000000298023,
+            "totalMs": 70.5
+          },
+          "verifyMs": 15.840687999999773,
+          "settleMs": 49.40081699999973
+        },
+        {
+          "ok": true,
+          "callMs": 83.91983500000015,
+          "loadMs": 34.20818899999995,
+          "discoverMs": 1.6358119999999872,
+          "timing": {
+            "firstRequestMs": 2.300000011920929,
+            "requests": 2,
+            "signMs": 2.9000000059604645,
+            "paidRequestMs": 76.5,
+            "totalMs": 81.80000001192093
+          },
+          "verifyMs": 23.051802999999836,
+          "settleMs": 51.52523599999995
+        },
+        {
+          "ok": true,
+          "callMs": 82.31174600000031,
+          "loadMs": 29.4720769999999,
+          "discoverMs": 1.6132299999999304,
+          "timing": {
+            "firstRequestMs": 2.199999988079071,
+            "requests": 2,
+            "signMs": 3.800000011920929,
+            "paidRequestMs": 74,
+            "totalMs": 80
+          },
+          "verifyMs": 21.84500399999979,
+          "settleMs": 50.25865500000009
+        },
+        {
+          "ok": true,
+          "callMs": 76.13103600000022,
+          "loadMs": 28.345800999999938,
+          "discoverMs": 1.6474840000000768,
+          "timing": {
+            "firstRequestMs": 1.5999999940395355,
+            "requests": 2,
+            "signMs": 2.199999988079071,
+            "paidRequestMs": 70.1000000089407,
+            "totalMs": 74
+          },
+          "verifyMs": 18.33879500000012,
+          "settleMs": 50.2398290000001
+        },
+        {
+          "ok": true,
+          "callMs": 77.66606700000011,
+          "loadMs": 28.329330000000027,
+          "discoverMs": 1.41604499999994,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.4000000059604645,
+            "paidRequestMs": 71.40000000596046,
+            "totalMs": 75.6000000089407
+          },
+          "verifyMs": 20.105275000000347,
+          "settleMs": 49.222379000000274
+        },
+        {
+          "ok": true,
+          "callMs": 77.51007000000027,
+          "loadMs": 32.60294399999975,
+          "discoverMs": 2.182980000000043,
+          "timing": {
+            "firstRequestMs": 2.0999999940395355,
+            "requests": 2,
+            "signMs": 2.5,
+            "paidRequestMs": 70.30000001192093,
+            "totalMs": 75.09999999403954
+          },
+          "verifyMs": 21.384250000000065,
+          "settleMs": 47.1072979999999
+        },
+        {
+          "ok": true,
+          "callMs": 75.54360200000019,
+          "loadMs": 27.273176999999578,
+          "discoverMs": 1.9010650000000169,
+          "timing": {
+            "firstRequestMs": 1.800000011920929,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 69.09999999403954,
+            "totalMs": 73.30000001192093
+          },
+          "verifyMs": 19.87396600000011,
+          "settleMs": 47.597437999999784
+        },
+        {
+          "ok": true,
+          "callMs": 80.51808399999982,
+          "loadMs": 27.30877499999997,
+          "discoverMs": 1.2104859999999462,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 73.79999999701977,
+            "totalMs": 78
+          },
+          "verifyMs": 20.056732999999895,
+          "settleMs": 50.60353900000018
+        },
+        {
+          "ok": true,
+          "callMs": 76.4528949999999,
+          "loadMs": 30.127078999999867,
+          "discoverMs": 1.482412000000295,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 70.30000001192093,
+            "totalMs": 74.40000000596046
+          },
+          "verifyMs": 19.622449999999844,
+          "settleMs": 48.787675000000036
+        },
+        {
+          "ok": true,
+          "callMs": 84.08073100000001,
+          "loadMs": 30.197151999999733,
+          "discoverMs": 1.958574000000226,
+          "timing": {
+            "firstRequestMs": 2.5,
+            "requests": 2,
+            "signMs": 3,
+            "paidRequestMs": 76,
+            "totalMs": 81.6000000089407
+          },
+          "verifyMs": 27.392643999999564,
+          "settleMs": 46.39749200000006
+        },
+        {
+          "ok": true,
+          "callMs": 71.6766290000005,
+          "loadMs": 28.497999999999593,
+          "discoverMs": 1.2621730000000753,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.6000000089406967,
+            "paidRequestMs": 65.19999998807907,
+            "totalMs": 69.59999999403954
+          },
+          "verifyMs": 17.650800999999774,
+          "settleMs": 45.791503999999804
+        },
+        {
+          "ok": true,
+          "callMs": 70.93210700000054,
+          "loadMs": 27.68906599999991,
+          "discoverMs": 1.3144320000001244,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 4,
+            "paidRequestMs": 63.29999999701977,
+            "totalMs": 68.79999999701977
+          },
+          "verifyMs": 15.700032000000647,
+          "settleMs": 45.76988200000051
+        },
+        {
+          "ok": true,
+          "callMs": 76.26497899999958,
+          "loadMs": 27.95631300000059,
+          "discoverMs": 1.2351019999996424,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 70.20000000298023,
+            "totalMs": 74.20000000298023
+          },
+          "verifyMs": 18.448394000000008,
+          "settleMs": 50.11740599999939
+        },
+        {
+          "ok": true,
+          "callMs": 73.46741499999916,
+          "loadMs": 28.26427599999988,
+          "discoverMs": 1.371331000000282,
+          "timing": {
+            "firstRequestMs": 2.0999999940395355,
+            "requests": 2,
+            "signMs": 2.8999999910593033,
+            "paidRequestMs": 66.30000001192093,
+            "totalMs": 71.40000000596046
+          },
+          "verifyMs": 15.636991999999736,
+          "settleMs": 48.90747199999987
+        },
+        {
+          "ok": true,
+          "callMs": 69.14439700000003,
+          "loadMs": 27.000812000000224,
+          "discoverMs": 1.2399509999995644,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.0999999940395355,
+            "paidRequestMs": 63.400000005960464,
+            "totalMs": 67.40000000596046
+          },
+          "verifyMs": 18.646718999999393,
+          "settleMs": 43.04422400000021
+        },
+        {
+          "ok": true,
+          "callMs": 84.305026,
+          "loadMs": 24.648480000000745,
+          "discoverMs": 1.2390900000000329,
+          "timing": {
+            "firstRequestMs": 1.5999999940395355,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 78.40000000596046,
+            "totalMs": 82.09999999403954
+          },
+          "verifyMs": 19.833369999999377,
+          "settleMs": 56.90434699999969
+        },
+        {
+          "ok": true,
+          "callMs": 75.70676100000037,
+          "loadMs": 28.55989800000043,
+          "discoverMs": 1.4051449999997203,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 2.5,
+            "paidRequestMs": 69.20000000298023,
+            "totalMs": 73.6000000089407
+          },
+          "verifyMs": 19.18557099999998,
+          "settleMs": 48.30385699999988
+        },
+        {
+          "ok": true,
+          "callMs": 64.03188199999931,
+          "loadMs": 28.187571999999818,
+          "discoverMs": 1.3210150000004433,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 58.099999994039536,
+            "totalMs": 62.19999998807907
+          },
+          "verifyMs": 15.264374999999745,
+          "settleMs": 41.32476299999962
+        }
+      ]
+    },
+    {
+      "scenario": "200ms-blocks (Base since 2026-11-05)",
+      "blockTimeMs": 200,
+      "receiptPollingMs": 200,
+      "runs": 25,
+      "ok": 25,
+      "chromium": "158.0.8127.18",
+      "latencyMs": {
+        "toolCall_total": {
+          "n": 25,
+          "p50": 261.9,
+          "p95": 464.3,
+          "min": 252.7,
+          "max": 465.2
+        },
+        "page_load": {
+          "n": 25,
+          "p50": 25.6,
+          "p95": 31.7,
+          "min": 22.9,
+          "max": 32
+        },
+        "discovery": {
+          "n": 25,
+          "p50": 1.3,
+          "p95": 2.1,
+          "min": 1.1,
+          "max": 2.2
+        },
+        "first_request_402": {
+          "n": 25,
+          "p50": 1.8,
+          "p95": 2.3,
+          "min": 1.3,
+          "max": 2.6
+        },
+        "wallet_sign": {
+          "n": 25,
+          "p50": 2.1,
+          "p95": 2.6,
+          "min": 1.8,
+          "max": 3
+        },
+        "paid_request_verify_settle_and_result": {
+          "n": 25,
+          "p50": 255.9,
+          "p95": 456.9,
+          "min": 247,
+          "max": 458.7
+        },
+        "facilitator_verify": {
+          "n": 25,
+          "p50": 16.9,
+          "p95": 22.4,
+          "min": 14.3,
+          "max": 23
+        },
+        "facilitator_settle": {
+          "n": 25,
+          "p50": 234.9,
+          "p95": 440.5,
+          "min": 229.8,
+          "max": 441
+        },
+        "pay_path_402_to_result": {
+          "n": 25,
+          "p50": 257.9,
+          "p95": 459.4,
+          "min": 248.9,
+          "max": 460.8
+        }
+      },
+      "roundTrips": {
+        "toolToMerchantHttp": 2,
+        "merchantToFacilitator": 2,
+        "chainTxPerCall": 1
+      },
+      "failures": [],
+      "raw": [
+        {
+          "ok": true,
+          "callMs": 263.03252299999986,
+          "loadMs": 31.741049000000203,
+          "discoverMs": 1.2673830000003363,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 256.1000000089407,
+            "totalMs": 260.40000000596046
+          },
+          "verifyMs": 19.381192000000738,
+          "settleMs": 234.893865
+        },
+        {
+          "ok": true,
+          "callMs": 456.9396139999999,
+          "loadMs": 24.49499999999989,
+          "discoverMs": 1.2470250000005763,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 451.59999999403954,
+            "totalMs": 455
+          },
+          "verifyMs": 15.376357999999527,
+          "settleMs": 434.785124
+        },
+        {
+          "ok": true,
+          "callMs": 254.79701600000044,
+          "loadMs": 24.32993600000009,
+          "discoverMs": 1.1968500000002678,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 1.8999999910593033,
+            "paidRequestMs": 249,
+            "totalMs": 252.79999999701977
+          },
+          "verifyMs": 17.72859900000003,
+          "settleMs": 229.75606100000005
+        },
+        {
+          "ok": true,
+          "callMs": 464.27602599999955,
+          "loadMs": 24.82705799999985,
+          "discoverMs": 1.2003670000003694,
+          "timing": {
+            "firstRequestMs": 1.2999999970197678,
+            "requests": 2,
+            "signMs": 2.0999999940395355,
+            "paidRequestMs": 458.70000000298023,
+            "totalMs": 462.20000000298023
+          },
+          "verifyMs": 16.158842000000732,
+          "settleMs": 440.9747209999996
+        },
+        {
+          "ok": true,
+          "callMs": 262.8547959999996,
+          "loadMs": 26.467529000000468,
+          "discoverMs": 1.3461129999996047,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 257.09999999403954,
+            "totalMs": 260.70000000298023
+          },
+          "verifyMs": 15.449837000000116,
+          "settleMs": 240.1973509999998
+        },
+        {
+          "ok": true,
+          "callMs": 258.05858100000114,
+          "loadMs": 25.51177800000005,
+          "discoverMs": 1.2368249999999534,
+          "timing": {
+            "firstRequestMs": 1.800000011920929,
+            "requests": 2,
+            "signMs": 2.0999999940395355,
+            "paidRequestMs": 251.6000000089407,
+            "totalMs": 255.6000000089407
+          },
+          "verifyMs": 17.5432869999986,
+          "settleMs": 232.0097850000002
+        },
+        {
+          "ok": true,
+          "callMs": 256.62669599999936,
+          "loadMs": 29.418786000000182,
+          "discoverMs": 1.188412999999855,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 251.09999999403954,
+            "totalMs": 254.79999999701977
+          },
+          "verifyMs": 14.576420999999755,
+          "settleMs": 234.88172099999974
+        },
+        {
+          "ok": true,
+          "callMs": 267.6546980000003,
+          "loadMs": 25.540140999999494,
+          "discoverMs": 1.2960880000009638,
+          "timing": {
+            "firstRequestMs": 1.699999988079071,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 262.09999999403954,
+            "totalMs": 265.8999999910593
+          },
+          "verifyMs": 16.182537000000593,
+          "settleMs": 244.46268900000177
+        },
+        {
+          "ok": true,
+          "callMs": 254.50978199999918,
+          "loadMs": 25.11685900000157,
+          "discoverMs": 1.1519140000000334,
+          "timing": {
+            "firstRequestMs": 2,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 248.29999999701977,
+            "totalMs": 252.59999999403954
+          },
+          "verifyMs": 15.293942000000243,
+          "settleMs": 231.45955099999992
+        },
+        {
+          "ok": true,
+          "callMs": 257.34394500000053,
+          "loadMs": 25.24402900000132,
+          "discoverMs": 1.1488589999989927,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 250.69999998807907,
+            "totalMs": 254.09999999403954
+          },
+          "verifyMs": 15.227865999999267,
+          "settleMs": 233.7901410000013
+        },
+        {
+          "ok": true,
+          "callMs": 256.9723809999996,
+          "loadMs": 23.399632000000565,
+          "discoverMs": 1.1288609999992332,
+          "timing": {
+            "firstRequestMs": 1.5999999940395355,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 251.5,
+            "totalMs": 255.09999999403954
+          },
+          "verifyMs": 16.86166400000002,
+          "settleMs": 233.17032499999914
+        },
+        {
+          "ok": true,
+          "callMs": 252.68785600000047,
+          "loadMs": 23.967219000000114,
+          "discoverMs": 1.4412130000000616,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 247,
+            "totalMs": 250.40000000596046
+          },
+          "verifyMs": 15.01984099999936,
+          "settleMs": 230.6149600000008
+        },
+        {
+          "ok": true,
+          "callMs": 262.74450699999943,
+          "loadMs": 25.151104000000487,
+          "discoverMs": 1.5307020000000193,
+          "timing": {
+            "firstRequestMs": 1.7000000029802322,
+            "requests": 2,
+            "signMs": 1.8999999910593033,
+            "paidRequestMs": 256.90000000596046,
+            "totalMs": 260.70000000298023
+          },
+          "verifyMs": 17.478354000000763,
+          "settleMs": 237.70190899999943
+        },
+        {
+          "ok": true,
+          "callMs": 253.31289199999992,
+          "loadMs": 22.911055999999007,
+          "discoverMs": 1.1024210000014136,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 247.20000000298023,
+            "totalMs": 251.5
+          },
+          "verifyMs": 14.250502999999298,
+          "settleMs": 231.4087649999983
+        },
+        {
+          "ok": true,
+          "callMs": 258.1362680000002,
+          "loadMs": 24.530587000001105,
+          "discoverMs": 1.237035999998625,
+          "timing": {
+            "firstRequestMs": 1.800000011920929,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 252.19999998807907,
+            "totalMs": 256
+          },
+          "verifyMs": 17.41867099999945,
+          "settleMs": 233.07423299999937
+        },
+        {
+          "ok": true,
+          "callMs": 255.42007700000067,
+          "loadMs": 27.50299399999858,
+          "discoverMs": 1.351903000000675,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.300000011920929,
+            "paidRequestMs": 249.19999998807907,
+            "totalMs": 253.3999999910593
+          },
+          "verifyMs": 15.981524999999237,
+          "settleMs": 231.56060399999842
+        },
+        {
+          "ok": true,
+          "callMs": 269.9572640000006,
+          "loadMs": 28.050090999999156,
+          "discoverMs": 2.126683000000412,
+          "timing": {
+            "firstRequestMs": 2.2999999970197678,
+            "requests": 2,
+            "signMs": 3,
+            "paidRequestMs": 262,
+            "totalMs": 267.29999999701977
+          },
+          "verifyMs": 19.673265999999785,
+          "settleMs": 240.24784700000055
+        },
+        {
+          "ok": true,
+          "callMs": 264.6237799999999,
+          "loadMs": 25.58266100000037,
+          "discoverMs": 1.3288599999996222,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 258.5,
+            "totalMs": 262.3999999910593
+          },
+          "verifyMs": 23.046763000000283,
+          "settleMs": 233.56405300000006
+        },
+        {
+          "ok": true,
+          "callMs": 261.87716100000034,
+          "loadMs": 28.639618999999584,
+          "discoverMs": 2.158283000000665,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 255.8999999910593,
+            "totalMs": 259.8999999910593
+          },
+          "verifyMs": 17.21943300000021,
+          "settleMs": 236.929223000001
+        },
+        {
+          "ok": true,
+          "callMs": 267.5652489999993,
+          "loadMs": 27.652024999999412,
+          "discoverMs": 1.3531760000005306,
+          "timing": {
+            "firstRequestMs": 2.5999999940395355,
+            "requests": 2,
+            "signMs": 2.6000000089406967,
+            "paidRequestMs": 259.09999999403954,
+            "totalMs": 264.29999999701977
+          },
+          "verifyMs": 17.092232000000877,
+          "settleMs": 239.80302400000073
+        },
+        {
+          "ok": true,
+          "callMs": 254.98038300000007,
+          "loadMs": 28.57575800000086,
+          "discoverMs": 1.1789759999992384,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 2.6000000089406967,
+            "paidRequestMs": 248.59999999403954,
+            "totalMs": 253.1000000089407
+          },
+          "verifyMs": 16.626858999999968,
+          "settleMs": 230.43087100000048
+        },
+        {
+          "ok": true,
+          "callMs": 465.1848289999998,
+          "loadMs": 28.438076000000365,
+          "discoverMs": 1.6166859999993903,
+          "timing": {
+            "firstRequestMs": 1.800000011920929,
+            "requests": 2,
+            "signMs": 2.5,
+            "paidRequestMs": 456.90000000596046,
+            "totalMs": 461.40000000596046
+          },
+          "verifyMs": 14.339932000000772,
+          "settleMs": 440.54741000000104
+        },
+        {
+          "ok": true,
+          "callMs": 257.1476939999993,
+          "loadMs": 27.393887000000177,
+          "discoverMs": 1.4166060000006837,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 250.79999999701977,
+            "totalMs": 255.19999998807907
+          },
+          "verifyMs": 18.673209000000497,
+          "settleMs": 230.47731899999962
+        },
+        {
+          "ok": true,
+          "callMs": 267.36913599999934,
+          "loadMs": 25.596417999999176,
+          "discoverMs": 1.3396200000006502,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.4000000059604645,
+            "paidRequestMs": 260.79999999701977,
+            "totalMs": 265.09999999403954
+          },
+          "verifyMs": 18.678288999999495,
+          "settleMs": 240.1307539999998
+        },
+        {
+          "ok": true,
+          "callMs": 266.7836160000006,
+          "loadMs": 31.98140599999897,
+          "discoverMs": 1.8640940000004775,
+          "timing": {
+            "firstRequestMs": 2.199999988079071,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 259.6000000089407,
+            "totalMs": 264.29999999701977
+          },
+          "verifyMs": 22.43815900000118,
+          "settleMs": 235.07650999999896
+        }
+      ]
+    },
+    {
+      "scenario": "2s-blocks (Base before 2026-11-05)",
+      "blockTimeMs": 2000,
+      "receiptPollingMs": 200,
+      "runs": 25,
+      "ok": 25,
+      "chromium": "158.0.8127.18",
+      "latencyMs": {
+        "toolCall_total": {
+          "n": 25,
+          "p50": 1064.2,
+          "p95": 1865.1,
+          "min": 248.6,
+          "max": 1865.7
+        },
+        "page_load": {
+          "n": 25,
+          "p50": 25.5,
+          "p95": 35.8,
+          "min": 22.5,
+          "max": 106.5
+        },
+        "discovery": {
+          "n": 25,
+          "p50": 1.2,
+          "p95": 1.6,
+          "min": 1,
+          "max": 2.2
+        },
+        "first_request_402": {
+          "n": 25,
+          "p50": 1.6,
+          "p95": 2,
+          "min": 1.2,
+          "max": 7.3
+        },
+        "wallet_sign": {
+          "n": 25,
+          "p50": 2,
+          "p95": 3,
+          "min": 1.7,
+          "max": 6
+        },
+        "paid_request_verify_settle_and_result": {
+          "n": 25,
+          "p50": 1058.6,
+          "p95": 1859.5,
+          "min": 242.7,
+          "max": 1860.3
+        },
+        "facilitator_verify": {
+          "n": 25,
+          "p50": 15.6,
+          "p95": 19.5,
+          "min": 13.7,
+          "max": 41.5
+        },
+        "facilitator_settle": {
+          "n": 25,
+          "p50": 1040.3,
+          "p95": 1841.8,
+          "min": 227.7,
+          "max": 1843.1
+        },
+        "pay_path_402_to_result": {
+          "n": 25,
+          "p50": 1060.6,
+          "p95": 1861.4,
+          "min": 244.5,
+          "max": 1862.1
+        }
+      },
+      "roundTrips": {
+        "toolToMerchantHttp": 2,
+        "merchantToFacilitator": 2,
+        "chainTxPerCall": 1
+      },
+      "failures": [],
+      "raw": [
+        {
+          "ok": true,
+          "callMs": 1663.3264600000002,
+          "loadMs": 31.210454000000027,
+          "discoverMs": 1.1095339999992575,
+          "timing": {
+            "firstRequestMs": 2,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 1656.800000011921,
+            "totalMs": 1661.2000000029802
+          },
+          "verifyMs": 13.973297000000457,
+          "settleMs": 1641.0990300000012
+        },
+        {
+          "ok": true,
+          "callMs": 1058.7481109999972,
+          "loadMs": 25.547976000001654,
+          "discoverMs": 1.1680149999992864,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 1053.2999999970198,
+            "totalMs": 1056.7999999970198
+          },
+          "verifyMs": 16.250787000000855,
+          "settleMs": 1035.5188720000006
+        },
+        {
+          "ok": true,
+          "callMs": 1661.680859,
+          "loadMs": 28.04505099999733,
+          "discoverMs": 1.1969200000021374,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 1655.9000000059605,
+            "totalMs": 1659.6000000089407
+          },
+          "verifyMs": 14.460290999999415,
+          "settleMs": 1639.8097049999997
+        },
+        {
+          "ok": true,
+          "callMs": 1264.4734629999984,
+          "loadMs": 27.291361999999936,
+          "discoverMs": 1.3788950000016484,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 1256.2999999970198,
+            "totalMs": 1260.199999988079
+          },
+          "verifyMs": 17.166933000000427,
+          "settleMs": 1237.6385269999992
+        },
+        {
+          "ok": true,
+          "callMs": 869.2530249999982,
+          "loadMs": 29.17226799999844,
+          "discoverMs": 1.5104150000006484,
+          "timing": {
+            "firstRequestMs": 1.5999999940395355,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 863.0999999940395,
+            "totalMs": 866.9000000059605
+          },
+          "verifyMs": 19.459760999998252,
+          "settleMs": 841.7446420000015
+        },
+        {
+          "ok": true,
+          "callMs": 1062.167335000002,
+          "loadMs": 26.181266999999934,
+          "discoverMs": 1.4352619999990566,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 1056.2000000029802,
+            "totalMs": 1060.2999999970198
+          },
+          "verifyMs": 16.621098000003258,
+          "settleMs": 1037.8373189999984
+        },
+        {
+          "ok": true,
+          "callMs": 1865.133711999999,
+          "loadMs": 23.41727600000013,
+          "discoverMs": 1.3421650000018417,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 1859.5,
+            "totalMs": 1863.1000000089407
+          },
+          "verifyMs": 14.598132999999507,
+          "settleMs": 1843.1099390000018
+        },
+        {
+          "ok": true,
+          "callMs": 852.0974940000015,
+          "loadMs": 24.565283000003546,
+          "discoverMs": 1.3438380000006873,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 846.7999999970198,
+            "totalMs": 850.2999999970198
+          },
+          "verifyMs": 13.74006499999814,
+          "settleMs": 831.740101000003
+        },
+        {
+          "ok": true,
+          "callMs": 1267.8144089999987,
+          "loadMs": 24.34149900000193,
+          "discoverMs": 1.25608099999954,
+          "timing": {
+            "firstRequestMs": 1.7000000029802322,
+            "requests": 2,
+            "signMs": 2.7000000029802322,
+            "paidRequestMs": 1261.5,
+            "totalMs": 1265.9000000059605
+          },
+          "verifyMs": 17.173023999996076,
+          "settleMs": 1242.643978
+        },
+        {
+          "ok": true,
+          "callMs": 1661.4316560000007,
+          "loadMs": 25.884354000001622,
+          "discoverMs": 1.6392179999966174,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.1000000089406967,
+            "paidRequestMs": 1655.5999999940395,
+            "totalMs": 1659.5999999940395
+          },
+          "verifyMs": 15.380034999994677,
+          "settleMs": 1638.4288259999958
+        },
+        {
+          "ok": true,
+          "callMs": 1470.624152000004,
+          "loadMs": 24.407965000005788,
+          "discoverMs": 1.2322569999960251,
+          "timing": {
+            "firstRequestMs": 1.300000011920929,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 1465.3999999910593,
+            "totalMs": 1468.7000000029802
+          },
+          "verifyMs": 15.597567000004346,
+          "settleMs": 1448.184110000002
+        },
+        {
+          "ok": true,
+          "callMs": 464.53849400000036,
+          "loadMs": 35.83868000000075,
+          "discoverMs": 1.3274569999994128,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.8999999910593033,
+            "paidRequestMs": 456.6000000089407,
+            "totalMs": 461.29999999701977
+          },
+          "verifyMs": 17.14984099999856,
+          "settleMs": 437.4481139999989
+        },
+        {
+          "ok": true,
+          "callMs": 1064.155906,
+          "loadMs": 26.27882200000022,
+          "discoverMs": 1.4427960000029998,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 1058.5999999940395,
+            "totalMs": 1062.2000000029802
+          },
+          "verifyMs": 16.78675199999998,
+          "settleMs": 1040.2672250000032
+        },
+        {
+          "ok": true,
+          "callMs": 1056.2954299999983,
+          "loadMs": 22.93751599999814,
+          "discoverMs": 1.1362350000053993,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2.2000000029802322,
+            "paidRequestMs": 1050.5,
+            "totalMs": 1054.5999999940395
+          },
+          "verifyMs": 15.213648999997531,
+          "settleMs": 1033.7807759999996
+        },
+        {
+          "ok": true,
+          "callMs": 1262.4809650000025,
+          "loadMs": 24.503034000001207,
+          "discoverMs": 1.22069499999634,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 1256.7000000029802,
+            "totalMs": 1260.1000000089407
+          },
+          "verifyMs": 16.261076000002504,
+          "settleMs": 1238.824385
+        },
+        {
+          "ok": true,
+          "callMs": 1056.2744699999967,
+          "loadMs": 29.907764000003226,
+          "discoverMs": 1.470749000000069,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 1050.4000000059605,
+            "totalMs": 1054.2000000029802
+          },
+          "verifyMs": 14.085038999997778,
+          "settleMs": 1034.7383319999935
+        },
+        {
+          "ok": true,
+          "callMs": 1865.6613929999949,
+          "loadMs": 29.92376399999921,
+          "discoverMs": 1.2165470000036294,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 1860.2999999970198,
+            "totalMs": 1863.7999999970198
+          },
+          "verifyMs": 16.952116000000387,
+          "settleMs": 1841.8334479999976
+        },
+        {
+          "ok": true,
+          "callMs": 1057.1153740000009,
+          "loadMs": 26.95637600000191,
+          "discoverMs": 1.3274380000002566,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 1051.7000000029802,
+            "totalMs": 1055.1000000089407
+          },
+          "verifyMs": 15.458292999996047,
+          "settleMs": 1034.787513999996
+        },
+        {
+          "ok": true,
+          "callMs": 658.4664350000021,
+          "loadMs": 23.42677399999957,
+          "discoverMs": 1.0313259999966249,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 3,
+            "paidRequestMs": 651.7999999970198,
+            "totalMs": 656.3999999910593
+          },
+          "verifyMs": 18.507564999999886,
+          "settleMs": 631.5094079999981
+        },
+        {
+          "ok": true,
+          "callMs": 248.5703480000011,
+          "loadMs": 23.226605000003474,
+          "discoverMs": 1.0881030000018654,
+          "timing": {
+            "firstRequestMs": 1.2000000029802322,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 242.70000000298023,
+            "totalMs": 245.79999999701977
+          },
+          "verifyMs": 13.752048000002105,
+          "settleMs": 227.6985599999971
+        },
+        {
+          "ok": true,
+          "callMs": 1486.8710710000014,
+          "loadMs": 24.414716999999655,
+          "discoverMs": 1.1384190000026138,
+          "timing": {
+            "firstRequestMs": 1.3999999910593033,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 1480.6000000089407,
+            "totalMs": 1484.5999999940395
+          },
+          "verifyMs": 18.713064999996277,
+          "settleMs": 1460.2356319999963
+        },
+        {
+          "ok": true,
+          "callMs": 1057.8141200000027,
+          "loadMs": 24.489509000006365,
+          "discoverMs": 1.133148999993864,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2.1000000089406967,
+            "paidRequestMs": 1050.3999999910593,
+            "totalMs": 1054.3999999910593
+          },
+          "verifyMs": 15.548344000002544,
+          "settleMs": 1033.0210350000052
+        },
+        {
+          "ok": true,
+          "callMs": 1255.7657710000058,
+          "loadMs": 24.56545300000289,
+          "discoverMs": 1.0888749999940046,
+          "timing": {
+            "firstRequestMs": 1.699999988079071,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 1249.9000000059605,
+            "totalMs": 1253.5999999940395
+          },
+          "verifyMs": 14.37161300000298,
+          "settleMs": 1233.9254159999982
+        },
+        {
+          "ok": true,
+          "callMs": 1859.7662739999942,
+          "loadMs": 22.534181000002718,
+          "discoverMs": 1.1636270000017248,
+          "timing": {
+            "firstRequestMs": 1.300000011920929,
+            "requests": 2,
+            "signMs": 1.699999988079071,
+            "paidRequestMs": 1854.800000011921,
+            "totalMs": 1857.800000011921
+          },
+          "verifyMs": 15.078201999996963,
+          "settleMs": 1838.1913820000045
+        },
+        {
+          "ok": true,
+          "callMs": 528.9156300000031,
+          "loadMs": 106.49846000000252,
+          "discoverMs": 2.2401589999935823,
+          "timing": {
+            "firstRequestMs": 7.299999997019768,
+            "requests": 2,
+            "signMs": 6,
+            "paidRequestMs": 512.9000000059605,
+            "totalMs": 526.2999999970198
+          },
+          "verifyMs": 41.470029000003706,
+          "settleMs": 464.33483700000215
+        }
+      ]
+    },
+    {
+      "scenario": "2s-blocks-viem-default-4s-polling",
+      "blockTimeMs": 2000,
+      "receiptPollingMs": 4000,
+      "runs": 25,
+      "ok": 25,
+      "chromium": "158.0.8127.18",
+      "latencyMs": {
+        "toolCall_total": {
+          "n": 25,
+          "p50": 4065.7,
+          "p95": 4105.6,
+          "min": 4052.2,
+          "max": 4123
+        },
+        "page_load": {
+          "n": 25,
+          "p50": 25.8,
+          "p95": 37.5,
+          "min": 22.9,
+          "max": 50.3
+        },
+        "discovery": {
+          "n": 25,
+          "p50": 1.3,
+          "p95": 3.2,
+          "min": 1,
+          "max": 4.3
+        },
+        "first_request_402": {
+          "n": 25,
+          "p50": 1.7,
+          "p95": 3.4,
+          "min": 1.2,
+          "max": 4.6
+        },
+        "wallet_sign": {
+          "n": 25,
+          "p50": 2.3,
+          "p95": 4.3,
+          "min": 1.7,
+          "max": 7.1
+        },
+        "paid_request_verify_settle_and_result": {
+          "n": 25,
+          "p50": 4059.6,
+          "p95": 4095.1,
+          "min": 4046.8,
+          "max": 4111.2
+        },
+        "facilitator_verify": {
+          "n": 25,
+          "p50": 19.5,
+          "p95": 32.4,
+          "min": 14.6,
+          "max": 34
+        },
+        "facilitator_settle": {
+          "n": 25,
+          "p50": 4037.5,
+          "p95": 4063.8,
+          "min": 4029.5,
+          "max": 4075.7
+        },
+        "pay_path_402_to_result": {
+          "n": 25,
+          "p50": 4061.6,
+          "p95": 4100.6,
+          "min": 4048.9,
+          "max": 4115.5
+        }
+      },
+      "roundTrips": {
+        "toolToMerchantHttp": 2,
+        "merchantToFacilitator": 2,
+        "chainTxPerCall": 1
+      },
+      "failures": [],
+      "raw": [
+        {
+          "ok": true,
+          "callMs": 4093.8641639999987,
+          "loadMs": 36.070069000008516,
+          "discoverMs": 2.1035089999932097,
+          "timing": {
+            "firstRequestMs": 2.4000000059604645,
+            "requests": 2,
+            "signMs": 4.0999999940395355,
+            "paidRequestMs": 4084.7000000029802,
+            "totalMs": 4091.2999999970198
+          },
+          "verifyMs": 31.360358000005363,
+          "settleMs": 4050.615663000004
+        },
+        {
+          "ok": true,
+          "callMs": 4080.718716999996,
+          "loadMs": 29.639935999992304,
+          "discoverMs": 1.8953440000041155,
+          "timing": {
+            "firstRequestMs": 3.4000000059604645,
+            "requests": 2,
+            "signMs": 2.7999999970197678,
+            "paidRequestMs": 4072.1000000089407,
+            "totalMs": 4078.4000000059605
+          },
+          "verifyMs": 23.992196000006516,
+          "settleMs": 4045.9210599999933
+        },
+        {
+          "ok": true,
+          "callMs": 4105.569260999997,
+          "loadMs": 34.802865999998176,
+          "discoverMs": 1.6156740000005811,
+          "timing": {
+            "firstRequestMs": 2.5,
+            "requests": 2,
+            "signMs": 7.0999999940395355,
+            "paidRequestMs": 4093.5,
+            "totalMs": 4103.0999999940395
+          },
+          "verifyMs": 34.04964800000016,
+          "settleMs": 4056.8653449999983
+        },
+        {
+          "ok": true,
+          "callMs": 4075.771695999996,
+          "loadMs": 29.325278999996954,
+          "discoverMs": 1.8145610000065062,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 3.199999988079071,
+            "paidRequestMs": 4068,
+            "totalMs": 4073.0999999940395
+          },
+          "verifyMs": 20.289935000007972,
+          "settleMs": 4045.7808349999978
+        },
+        {
+          "ok": true,
+          "callMs": 4087.3052069999976,
+          "loadMs": 28.248036999997566,
+          "discoverMs": 1.181590000007418,
+          "timing": {
+            "firstRequestMs": 1.7999999970197678,
+            "requests": 2,
+            "signMs": 3.4000000059604645,
+            "paidRequestMs": 4079.3999999910593,
+            "totalMs": 4084.5999999940395
+          },
+          "verifyMs": 26.71146300001419,
+          "settleMs": 4050.904070000004
+        },
+        {
+          "ok": true,
+          "callMs": 4101.386018000005,
+          "loadMs": 28.117538999998942,
+          "discoverMs": 1.1212159999995492,
+          "timing": {
+            "firstRequestMs": 1.7000000029802322,
+            "requests": 2,
+            "signMs": 2.3999999910593033,
+            "paidRequestMs": 4095.1000000089407,
+            "totalMs": 4099.20000000298
+          },
+          "verifyMs": 29.450135000006412,
+          "settleMs": 4063.8156639999943
+        },
+        {
+          "ok": true,
+          "callMs": 4078.020028999992,
+          "loadMs": 29.71630100000766,
+          "discoverMs": 1.3168670000013663,
+          "timing": {
+            "firstRequestMs": 1.699999988079071,
+            "requests": 2,
+            "signMs": 2.6000000089406967,
+            "paidRequestMs": 4071.7000000029802,
+            "totalMs": 4076.0999999940395
+          },
+          "verifyMs": 21.4158599999937,
+          "settleMs": 4048.884711000006
+        },
+        {
+          "ok": true,
+          "callMs": 4065.7272489999887,
+          "loadMs": 25.47541800000181,
+          "discoverMs": 1.2385690000082832,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 2.5,
+            "paidRequestMs": 4058.199999988079,
+            "totalMs": 4062.4000000059605
+          },
+          "verifyMs": 18.91922599999816,
+          "settleMs": 4037.7532619999984
+        },
+        {
+          "ok": true,
+          "callMs": 4062.222311999998,
+          "loadMs": 23.821842999997898,
+          "discoverMs": 1.1606310000061058,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.6000000089406967,
+            "paidRequestMs": 4055.2999999970198,
+            "totalMs": 4059.4000000059605
+          },
+          "verifyMs": 17.095367999994778,
+          "settleMs": 4036.699455000009
+        },
+        {
+          "ok": true,
+          "callMs": 4061.5907149999985,
+          "loadMs": 28.6662490000017,
+          "discoverMs": 1.3017689999978757,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 2.8999999910593033,
+            "paidRequestMs": 4055,
+            "totalMs": 4059.6000000089407
+          },
+          "verifyMs": 17.856070000008913,
+          "settleMs": 4035.533242999998
+        },
+        {
+          "ok": true,
+          "callMs": 4058.9770389999903,
+          "loadMs": 25.19002600001113,
+          "discoverMs": 1.224963000000571,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 4053.5999999940395,
+            "totalMs": 4057.2000000029802
+          },
+          "verifyMs": 16.32087899999169,
+          "settleMs": 4035.6742800000065
+        },
+        {
+          "ok": true,
+          "callMs": 4058.972130000009,
+          "loadMs": 25.78949300000386,
+          "discoverMs": 1.108542000001762,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 1.7000000029802322,
+            "paidRequestMs": 4053.8999999910593,
+            "totalMs": 4057.1000000089407
+          },
+          "verifyMs": 15.595203000004403,
+          "settleMs": 4036.9328470000182
+        },
+        {
+          "ok": true,
+          "callMs": 4070.8830759999983,
+          "loadMs": 37.5112519999966,
+          "discoverMs": 1.6530149999889545,
+          "timing": {
+            "firstRequestMs": 2,
+            "requests": 2,
+            "signMs": 2.9000000059604645,
+            "paidRequestMs": 4063.8999999910593,
+            "totalMs": 4068.7999999970198
+          },
+          "verifyMs": 21.09302800000296,
+          "settleMs": 4040.986374
+        },
+        {
+          "ok": true,
+          "callMs": 4058.8932599999825,
+          "loadMs": 24.767485999997007,
+          "discoverMs": 1.1877720000047702,
+          "timing": {
+            "firstRequestMs": 1.6000000089406967,
+            "requests": 2,
+            "signMs": 2.0999999940395355,
+            "paidRequestMs": 4053.2000000029802,
+            "totalMs": 4056.9000000059605
+          },
+          "verifyMs": 21.68855699998676,
+          "settleMs": 4030.1203579999856
+        },
+        {
+          "ok": true,
+          "callMs": 4054.9575459999905,
+          "loadMs": 24.618593999999575,
+          "discoverMs": 1.2553110000153538,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 4049.7000000029802,
+            "totalMs": 4053.1000000089407
+          },
+          "verifyMs": 16.062489000003552,
+          "settleMs": 4032.199390999973
+        },
+        {
+          "ok": true,
+          "callMs": 4064.924385999999,
+          "loadMs": 23.30188700000872,
+          "discoverMs": 1.145301999989897,
+          "timing": {
+            "firstRequestMs": 1.2000000029802322,
+            "requests": 2,
+            "signMs": 1.7999999970197678,
+            "paidRequestMs": 4060,
+            "totalMs": 4063
+          },
+          "verifyMs": 17.151113999978406,
+          "settleMs": 4041.292042999994
+        },
+        {
+          "ok": true,
+          "callMs": 4052.2336810000124,
+          "loadMs": 24.50138099998003,
+          "discoverMs": 1.2043940000003204,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2.0999999940395355,
+            "paidRequestMs": 4046.7999999970198,
+            "totalMs": 4050.4000000059605
+          },
+          "verifyMs": 15.915841000009095,
+          "settleMs": 4029.5375129999884
+        },
+        {
+          "ok": true,
+          "callMs": 4053.3062849999988,
+          "loadMs": 23.47261999998591,
+          "discoverMs": 1.1085730000049807,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.8999999910593033,
+            "paidRequestMs": 4048,
+            "totalMs": 4051.5
+          },
+          "verifyMs": 14.774846999993315,
+          "settleMs": 4031.868362999987
+        },
+        {
+          "ok": true,
+          "callMs": 4053.75508599999,
+          "loadMs": 23.39336099999491,
+          "discoverMs": 1.115966000012122,
+          "timing": {
+            "firstRequestMs": 1.699999988079071,
+            "requests": 2,
+            "signMs": 1.9000000059604645,
+            "paidRequestMs": 4048.2000000029802,
+            "totalMs": 4051.7999999970198
+          },
+          "verifyMs": 16.575249999994412,
+          "settleMs": 4030.152098999999
+        },
+        {
+          "ok": true,
+          "callMs": 4071.099937000021,
+          "loadMs": 26.64942400000291,
+          "discoverMs": 1.5360629999777302,
+          "timing": {
+            "firstRequestMs": 1.7000000029802322,
+            "requests": 2,
+            "signMs": 1.8999999910593033,
+            "paidRequestMs": 4063.6000000089407,
+            "totalMs": 4067.2999999970198
+          },
+          "verifyMs": 23.178022999985842,
+          "settleMs": 4037.460678000003
+        },
+        {
+          "ok": true,
+          "callMs": 4069.539277999982,
+          "loadMs": 29.797924999991665,
+          "discoverMs": 4.309192000015173,
+          "timing": {
+            "firstRequestMs": 1.8999999910593033,
+            "requests": 2,
+            "signMs": 2.2999999970197678,
+            "paidRequestMs": 4061.2999999970198,
+            "totalMs": 4065.699999988079
+          },
+          "verifyMs": 19.483666000014637,
+          "settleMs": 4040.177128999989
+        },
+        {
+          "ok": true,
+          "callMs": 4060.5112990000052,
+          "loadMs": 25.640492000005906,
+          "discoverMs": 1.356712000007974,
+          "timing": {
+            "firstRequestMs": 1.4000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 4054.2000000029802,
+            "totalMs": 4057.6000000089407
+          },
+          "verifyMs": 17.436996000004,
+          "settleMs": 4035.216692999995
+        },
+        {
+          "ok": true,
+          "callMs": 4059.698618000024,
+          "loadMs": 22.949488999991445,
+          "discoverMs": 1.013260999985505,
+          "timing": {
+            "firstRequestMs": 1.5,
+            "requests": 2,
+            "signMs": 1.699999988079071,
+            "paidRequestMs": 4053.9000000059605,
+            "totalMs": 4057.2000000029802
+          },
+          "verifyMs": 14.611558000004152,
+          "settleMs": 4036.9937619999982
+        },
+        {
+          "ok": true,
+          "callMs": 4122.9939530000265,
+          "loadMs": 50.2721400000155,
+          "discoverMs": 3.198274999973364,
+          "timing": {
+            "firstRequestMs": 4.5999999940395355,
+            "requests": 2,
+            "signMs": 4.299999997019768,
+            "paidRequestMs": 4111.20000000298,
+            "totalMs": 4120.20000000298
+          },
+          "verifyMs": 32.40207300000475,
+          "settleMs": 4075.7406770000234
+        },
+        {
+          "ok": true,
+          "callMs": 4068.8009369999927,
+          "loadMs": 25.393604000011692,
+          "discoverMs": 1.468655000004219,
+          "timing": {
+            "firstRequestMs": 1.9000000059604645,
+            "requests": 2,
+            "signMs": 2,
+            "paidRequestMs": 4059.6000000089407,
+            "totalMs": 4063.7999999970198
+          },
+          "verifyMs": 19.578547000011895,
+          "settleMs": 4036.0340819999983
+        }
+      ]
+    }
+  ]
+}

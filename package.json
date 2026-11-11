@@ -1,0 +1,1 @@
+{"name":"x402-webmcp-lab","version":"0.1.0","private":true,"type":"module","license":"MIT","scripts":{"test":"node src/run.mjs"},"dependencies":{"@x402/core":"^2.30.0","@x402/evm":"^2.30.0","@x402/express":"^2.30.0","@x402/fetch":"^2.30.0","express":"^5.3.0","ganache":"^7.9.2","playwright-core":"^1.65.0","solc":"^0.8.38","viem":"^2.57.17"}}
