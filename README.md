@@ -4,6 +4,12 @@ Can an AI agent pay per call for a tool that a web page exposes over WebMCP, usi
 
 **Yes, end to end, on a local chain with a test token.** `npm test` runs the whole flow and exits 0 only if every check passes. Raw numbers are in `results.json`.
 
+## Watch it
+
+![An agent pays per call: 402, signature, settle, result, with a live millisecond timer](post/demo.gif)
+
+The real run, recorded in Chromium: a live timer, the 402, the wallet signature and the settle, first on 2 s blocks with viem's default 4 s polling, then on 200 ms blocks. Full video: [post/demo.mp4](post/demo.mp4). Slides: [post/carousel/carousel.pdf](post/carousel/carousel.pdf). Re-record with `node post/video/record.mjs <dir>` then `post/video/build.sh <dir> post` (needs ffmpeg).
+
 ## What it does
 
 ```

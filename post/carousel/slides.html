@@ -1,0 +1,81 @@
+<!doctype html><meta charset="utf-8"><title>x402 + WebMCP carousel</title><style>*{box-sizing:border-box}html,body{margin:0}body{font-family:'Liberation Sans',Arial,sans-serif;color:#0b0b0b}
+.s{width:1080px;height:1350px;padding:96px 84px;background:#fcfcfb;position:relative;overflow:hidden;page-break-after:always;break-after:page}
+.s.dark{background:#0e1014;color:#f3f1ec}
+.k{font-size:30px;letter-spacing:2px;text-transform:uppercase;color:#52514e;margin-bottom:36px}.dark .k{color:#9fb3ff}
+h1{font-size:92px;line-height:1.05;margin:0 0 40px}h2{font-size:68px;line-height:1.1;margin:0 0 48px}h3{font-size:44px;margin:0 0 20px}
+.big{font:700 280px/1 'Liberation Mono',monospace;letter-spacing:-10px;color:#3987e5;margin:20px 0}.big small{font-size:90px;letter-spacing:0;color:#b9b6ad}
+.sub{font-size:44px;line-height:1.3;color:#52514e;margin:0 0 32px}.dark .sub{color:#c9c6bd}
+.foot{position:absolute;left:84px;right:84px;bottom:72px;font-size:28px;color:#6b6a66;margin:0}.dark .foot{color:#9a9a92}
+.flow{display:flex;flex-direction:column;gap:0}.box{border:3px solid #0b0b0b;border-radius:14px;padding:22px 30px}.box b{display:block;font-size:44px}.box span{font-size:32px;color:#52514e}
+.arr{font-size:30px;color:#2a78d6;padding:12px 0 12px 40px;border-left:4px solid #2a78d6;margin-left:60px}.arr em{color:#eb6834;font-style:normal;font-weight:700}
+.chart{width:912px;margin-top:0}.chart .lab{font-size:40px;fill:#0b0b0b}.chart .val{font-size:36px;fill:#52514e;font-family:'Liberation Mono',monospace}
+.legend{display:flex;gap:40px;font-size:30px;margin-top:12px}.legend i{display:inline-block;width:26px;height:26px;border-radius:4px;margin-right:12px;vertical-align:-4px}
+.rows .r{display:flex;justify-content:space-between;font-size:56px;padding:44px 0;border-top:2px solid #e2e1dc}.rows b{font-family:'Liberation Mono',monospace}
+.cmp{display:flex;gap:40px;margin-bottom:48px}.cmp>div{flex:1;border:3px solid #0b0b0b;border-radius:14px;padding:28px}.cmp small{display:block;font-size:30px;color:#52514e;min-height:76px}.cmp b{font:700 62px 'Liberation Mono',monospace;letter-spacing:-3px}.hot{color:#eb6834}
+pre{font:700 52px 'Liberation Mono',monospace;background:#0e1014;color:#7fd1a8;padding:28px 36px;border-radius:14px;margin:0;display:inline-block}
+.cols{display:flex;gap:48px}.cols>div{flex:1}.cols li{font-size:38px;line-height:1.3;margin-bottom:18px}.cols ul{padding-left:36px;margin:0}
+.opts{list-style:none;padding:0;margin:56px 0 0}.opts li{font-size:64px;border:3px solid #3987e5;border-radius:16px;padding:22px 36px;margin-bottom:24px}
+.url{font:700 52px 'Liberation Mono',monospace;color:#9fb3ff;margin:20px 0 48px;word-break:break-all}.cta pre{background:#1b1f27}@page{size:1080px 1350px;margin:0}</style>
+<section class="s dark" id="s1"><div class="k">x402 + WebMCP, measured</div>
+<h1>An AI agent paid for a web tool call.</h1>
+<div class="big">262<small> ms</small></div>
+<p class="sub">Median, with 200 ms blocks. No human. No API key.</p>
+<p class="foot">Local test chain, test token. Swipe for the method, the numbers and what is fake.</p></section>
+<section class="s" id="s2"><div class="k">How it works</div><h2>One tool call, one 402, one signature.</h2>
+<div class="flow">
+<div class="box"><b>Agent host</b><span>holds the wallet and the spending caps</span></div><div class="arr">calls get_quote over WebMCP</div>
+<div class="box"><b>Web page</b><span>registers the tool with document.modelContext</span></div><div class="arr">fetch /api/quote  gets <em>402 + price</em></div>
+<div class="box"><b>Wallet bridge</b><span>host signs an EIP-3009 authorization (2.1 ms)</span></div><div class="arr">retry with PAYMENT-SIGNATURE</div>
+<div class="box"><b>Merchant + facilitator</b><span>verify, settle on chain, return 200 + result</span></div>
+</div><p class="foot">The page never holds a key.</p></section>
+<section class="s" id="s3"><div class="k">Latency, 25 runs per row</div><h2>The payment is the latency.</h2>
+<svg viewBox="0 0 912 830" class="chart" role="img" aria-label="Tool call latency p50 and p95 in milliseconds for four chain scenarios">
+<text x="0" y="44" class="lab">Instant mining</text>
+  <rect x="0" y="60" width="12.567857142857143" height="54" rx="4" fill="#2a78d6"/>
+  <text x="24.567857142857143" y="100" class="val">76.5</text>
+  <rect x="0" y="120" width="14.70357142857143" height="54" rx="4" fill="#eb6834"/>
+  <text x="26.70357142857143" y="160" class="val">89.5</text>
+<text x="0" y="244" class="lab">200 ms blocks</text>
+  <rect x="0" y="260" width="43.02642857142857" height="54" rx="4" fill="#2a78d6"/>
+  <text x="55.02642857142857" y="300" class="val">261.9</text>
+  <rect x="0" y="320" width="76.27785714285714" height="54" rx="4" fill="#eb6834"/>
+  <text x="88.27785714285714" y="360" class="val">464.3</text>
+<text x="0" y="444" class="lab">2 s blocks</text>
+  <rect x="0" y="460" width="174.83285714285714" height="54" rx="4" fill="#2a78d6"/>
+  <text x="186.83285714285714" y="500" class="val">1064.2</text>
+  <rect x="0" y="520" width="306.4092857142857" height="54" rx="4" fill="#eb6834"/>
+  <text x="318.4092857142857" y="560" class="val">1865.1</text>
+<text x="0" y="644" class="lab">2 s blocks, 4 s polling</text>
+  <rect x="0" y="660" width="667.9364285714286" height="54" rx="4" fill="#2a78d6"/>
+  <text x="679.9364285714286" y="700" class="val">4065.7</text>
+  <rect x="0" y="720" width="674.4914285714286" height="54" rx="4" fill="#eb6834"/>
+  <text x="686.4914285714286" y="760" class="val">4105.6</text>
+</svg>
+<div class="legend"><span><i style="background:#2a78d6"></i>p50 ms</span><span><i style="background:#eb6834"></i>p95 ms</span></div>
+<p class="foot">Source: results.json, tool call to result, one axis from 0.</p></section>
+<section class="s" id="s4"><div class="k">Where 262 ms goes (200 ms blocks, p50)</div><h2>Settling on chain is almost all of it.</h2>
+<div class="rows">
+<div class="r"><span>Facilitator settle</span><b>234.9 ms</b></div>
+<div class="r"><span>Facilitator verify</span><b>16.9 ms</b></div>
+<div class="r"><span>Wallet sign</span><b>2.1 ms</b></div>
+<div class="r"><span>Tool discovery (getTools)</span><b>1.3 ms</b></div>
+</div><p class="sub">The WebMCP part costs about 1 ms. Block time sets the rest.</p>
+<p class="foot">Source: results.json. Discovery figure from README.</p></section>
+<section class="s warn" id="s5"><div class="k">The gotcha</div><h2>One default turned 1.06 s into 4.07 s.</h2>
+<div class="cmp"><div><small>2 s blocks, receipt polling 200 ms</small><b>1 064 ms</b></div>
+<div><small>same chain, viem default 4 s polling</small><b class="hot">4 066 ms</b></div></div>
+<p class="sub">viem checks for a receipt every 4 s. The settle waited for the poll, not the block.</p>
+<pre>pollingInterval: 200</pre><p class="foot">Median tool call, 25 runs each. Source: results.json.</p></section>
+<section class="s" id="s6"><div class="k">Real vs test</div><h2>What you can trust, and what you cannot.</h2>
+<div class="cols"><div><h3>Real</h3><ul><li>Chromium 158.0.8127.18 with native WebMCP</li><li>Official x402 SDK 2.30.0</li><li>EIP-712 signing, on-chain transfer</li><li>Spend caps and replay protection</li></ul></div>
+<div><h3>Test</h3><ul><li>Local ganache chain</li><li>Own test token, not USDC</li><li>Facilitator runs on loopback</li><li>A script, not an LLM</li><li>The wallet bridge is my invention</li></ul></div></div>
+<p class="foot">A hosted facilitator and a real RPC add round trips I did not measure.</p></section>
+<section class="s dark" id="s7"><div class="k">The open problem</div><h1>Who holds the agent's wallet?</h1>
+<p class="sub">WebMCP has no payment or wallet hook. The page can ask for money. Something else has to sign.</p>
+<ul class="opts"><li>The browser</li><li>The model vendor</li><li>You</li></ul>
+<p class="foot">Every demo I found keeps the key in the page or its server.</p></section>
+<section class="s dark cta" id="s8"><div class="k">Run it yourself</div><h1>Code, method and raw numbers.</h1>
+<div class="url">github.com/Egoushka/x402-webmcp-lab</div>
+<pre>npm install
+npm test</pre><p class="sub">MIT. Four scenarios, 25 runs each.</p>
+<p class="foot">Who should hold the wallet? Tell me in the comments.</p></section>
