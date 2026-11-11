@@ -53,7 +53,7 @@ Needs Node 22+ (built on 26.13) and a Playwright Chromium (`npx playwright insta
 | 2 s blocks, viem default 4 s receipt polling | 4065.7 / 4105.6 | 4037.5 | 19.5 | 2.3 |
 
 - Round trips per paid call: 2 HTTP requests page to merchant (402, then paid), 2 merchant to facilitator (verify, settle), 1 chain transaction. Discovery (`getTools`) and page load are local, about 1.3 ms and 25 ms.
-- "402 to pay to settle" (sign plus the paid request) is 98% or more of tool-call time in every scenario. The payment is the latency; the WebMCP part is about 1 ms.
+- "402 to pay to settle" (sign plus the paid request) is 95% or more of tool-call time in every scenario. The payment is the latency; the WebMCP part is about 1 ms.
 - Failures: 0 of 100 timed calls. During the build: (a) the headless-shell and default launch have no WebMCP; it needs `--enable-experimental-web-platform-features --enable-features=WebMCPTesting`; (b) the API is `document.modelContext` in the current spec draft, while most examples online still use `navigator.modelContext`; (c) viem polls for receipts every 4 s by default, which turned a 1 s settle into 4 s until the facilitator client set `pollingInterval: 200`.
 - Timed-block scenarios start each run at a random phase of the block interval. Ganache has no block-time option below 1 s, so timed mining is an `evm_mine` timer.
 
