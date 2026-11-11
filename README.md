@@ -6,9 +6,9 @@ Can an AI agent pay per call for a tool that a web page exposes over WebMCP, usi
 
 ## Watch it
 
-![An agent pays per call: 402, signature, settle, result, with a live millisecond timer](post/demo.gif)
+![A cartoon robot walks up to a shop, gets a 402, pays 0.01 USDC and walks off with the answer in 262 ms](post/demo.gif)
 
-The real run, recorded in Chromium: a live timer, the 402, the wallet signature and the settle, first on 2 s blocks with viem's default 4 s polling, then on 200 ms blocks. Full video: [post/demo.mp4](post/demo.mp4). Slides: [post/carousel/carousel.pdf](post/carousel/carousel.pdf). Re-record with `node post/video/record.mjs <dir>` then `post/video/build.sh <dir> post` (needs ffmpeg).
+A cartoon of the real flow: ask, 402, pay, answer. The 262 ms is the measured median on 200 ms blocks (`results.json`), slowed down for the timer. Full video: [post/demo.mp4](post/demo.mp4). Slides: [post/carousel/carousel.pdf](post/carousel/carousel.pdf). Regenerate with `node post/cartoon/make.mjs` (needs ffmpeg).
 
 ## What it does
 
